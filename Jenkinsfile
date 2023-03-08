@@ -1,7 +1,7 @@
 pipeline {
     agent any
 environment {
-	PARAMETER_01 = 'params.PARAMETER_01'
+	PARAMETER_01 = '${params.PARAMETER_01}'
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
     }
