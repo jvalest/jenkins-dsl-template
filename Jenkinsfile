@@ -1,6 +1,7 @@
 pipeline {
     agent any
 environment {
+	PARAMETER_01 = params.PARAMETER_01
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
     }
@@ -38,7 +39,7 @@ stage('Setup parameters') {
         }
         stage('git repo & clean') {
             steps {
-               sh "echo $DB_ENGINE"
+               sh "echo $PARAMETER_01"
             }
         }
     }
