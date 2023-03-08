@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Cloning Git repository') {
             steps {
-               sh "${env.GIT_BRANCH}"
+               sh "${GIT_BRANCH}"
             }
         }
     }
